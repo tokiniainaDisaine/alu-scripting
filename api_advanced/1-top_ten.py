@@ -9,7 +9,7 @@ def top_ten(subreddit):
     """
     sdfvb
     """
-    url = "https://www.reddit.com/r/{}/about".format(subreddit)
+    url = "https://oauth.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {"User-Agent": "My User Agent 1.0"}
 
     response = requests.get(
