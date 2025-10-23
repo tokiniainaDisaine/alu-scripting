@@ -4,6 +4,7 @@ sdfgfg
 """
 import requests
 
+
 def top_ten(subreddit):
     """
     sdfvb
@@ -16,7 +17,7 @@ def top_ten(subreddit):
                 headers=headers,
                 allow_redirects=False
                 )
-    
+
     if response.status_code != 200:
         print(None)
         return
