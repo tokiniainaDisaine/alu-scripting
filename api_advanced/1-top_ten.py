@@ -24,12 +24,12 @@ def top_ten(subreddit):
             posts = data.get('children', [])
 
             if not posts:
-                print("OK", end="")
+                print("OK", end="\n")
                 return
 
             for post in posts[:10]:
                 print(post['data'].get('title', "No Title Found"))
         except ValueError:
-            print("OK", end="")
+            print("OK", end="\n")
     else:
-        print("OK", end="")
+        print("OK", end="\n")
