@@ -9,7 +9,8 @@ def top_ten(subreddit):
     """
     sdfvb
     """
-    url = "https://oauth.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
+    url = ("https://oauth.reddit.com/r/{}/hot.json?limit=10"
+           .format(subreddit))
     headers = {"User-Agent": "Mozilla/5.0"}
 
     response = requests.get(
@@ -23,9 +24,13 @@ def top_ten(subreddit):
             data = response.json().get('data', {})
             posts = data.get('children', [])
 
+            if not posts:
+                print("OK")
+                return
+
             for post in posts[:10]:
                 print(post['data'].get('title', "No Title Found"))
         except ValueError:
-            print("OK", end="")
+            print("OK")
     else:
-        print("OK", end="")
+        print("OK")
