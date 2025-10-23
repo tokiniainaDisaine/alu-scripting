@@ -10,11 +10,11 @@ def number_of_subscribers(subreddit):
     number_of_subscribers
     """
     url = "https://www.reddit.com/r/{}/about".format(subreddit)
-    headers = {"User-Agent": "My User Agent 1.0"}  
+    headers = {"User-Agent": "My User Agent 1.0"}
 
     response = requests.get(
-                url, 
-                headers=headers, 
+                url,
+                headers=headers,
                 allow_redirects=False
                 )
 
