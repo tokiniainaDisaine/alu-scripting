@@ -22,6 +22,6 @@ def top_ten(subreddit):
         print(None)
         return
     else:
-        posts = response.json()['data']['children']
+        posts = response.json()["data"]["children"]
         for post in posts:
-            print(post['data']['title'])
+            print(post["data"]["title"])
