@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
-wdefv
+0-subs
 """
 import requests
 
+
 def number_of_subscribers(subreddit):
     """
-    wedrfg
+    number_of_subscribers
     """
     url = f"https://oauth.reddit.com/r/{str(subreddit)}/about"
     headers = {"User-Agent": "Mozilla/5.0"}  
