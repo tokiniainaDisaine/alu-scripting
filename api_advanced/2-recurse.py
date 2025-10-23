@@ -9,16 +9,16 @@ def recurse(subreddit, hot_list=[], after=''):
     """
     defghjn
     """
-    subreddit_url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     headers = {'User-Agent': 'Myapi-app'}
     parameter = {'after': after}
 
     response = requests.get(
-                subreddit_url,
+                url,
                 headers=headers,
                 params=parameter,
                 allow_redirects=False)
-    
+
     if response.status_code == 200:
         datas = response.json()
         values = datas['data']['children']
